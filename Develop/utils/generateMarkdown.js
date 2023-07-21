@@ -38,14 +38,19 @@ function generateMarkdown(response) {
 
   ## Table of Contents
 
-  -Installation Instructions
-  -Usage
-  -License
-  -Contributing
-  -Tests
-  -Questions
+  -[Installation](#Installation)
 
-  ## Installation Instructions
+  -[Usage](#Usage)
+
+  -[License](#License)
+
+  -[Contributions](#Contributions)
+
+  -[Tests](#Tests)
+
+  -[Questions](#Questions)
+
+  ## Installation
   ${installInstructions}
 
   ## Usage
@@ -57,11 +62,13 @@ function generateMarkdown(response) {
   ## Contributions
   ${contributions}
 
-  ## Contributions
+  ## Tests
   ${tests}
 
   ## Questions
-  Feel free to reach out to me at my Github at https://github.com/${githubProfile}
+  Feel free to reach out to me at my Github at https://github.com/${githubProfile}.
+
+  You can also reach me through my e-mail at ${eMailAddress}!
 
   `;
 
