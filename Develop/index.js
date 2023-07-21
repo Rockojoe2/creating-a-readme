@@ -28,7 +28,7 @@ Need to figure out how to make a README file from our answers that we get.
 
 const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js"); //Need to call over my generateMarkdown js file to use the generateMarkdown function.
 
 
 
@@ -46,17 +46,45 @@ inquirer
       message: 'Enter a description?',
       name: 'description',
     },
+    
     {
       type: 'input',
       message: 'Enter installation instructions:',
       name: 'installation',
     },
+
     {
-        type: 'list',
-        message: 'Enter installation instructions:',
-        name: 'license',
-        choices: ["MIT License", "Apache License 2.0", "GNU General Public License V3.0", "Eclipse Public License 1.0", "Other"],
-      },
+        type: 'input',
+        message: 'Enter usage:',
+        name: 'usage',
+    },
+    {
+          type: 'list',
+          message: 'Pick a license:',
+          name: 'license',
+          choices: ["MIT License", "Apache License 2.0", "GNU General Public License V3.0", "Eclipse Public License 1.0", "Other"],
+    },
+
+    {
+        type: 'input',
+        message: 'Enter contributions:',
+        name: 'contribution',
+    },
+    {
+        type: 'input',
+        message: 'Enter tests:',
+        name: 'test',
+    },
+    {
+        type: 'input',
+        message: 'What is your github username? ',
+        name: 'github',
+    },
+    {
+        type: 'input',
+        message: 'What is your e-mail address? ',
+        name: 'eMail',
+    },
   ])
   .then(function(response){
 
