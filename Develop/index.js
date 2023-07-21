@@ -25,88 +25,49 @@ Need to figure out how to make a README file from our answers that we get.
 
 // TODO: Include packages needed for this application
 
-const readline = require("readline");
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  
+const inquirer = require("inquirer");
+const fs = require("fs"); //Needed to perform file operations such as making a readme
+
+
 
 // TODO: Create an array of questions for user input
-const questions = [
+
+inquirer
+  .prompt([
     {
-        question: "What is your name? "
+      type: 'input',
+      message: 'What is your user name?',
+      name: 'username',
     },
-
     {
-        question: "What year were you born in? "
+      type: 'input',
+      message: 'What is your password?',
+      name: 'password',
     },
-
     {
-        question: "Where did you attend college? "
-    }
-];
+      type: 'input',
+      message: 'Re-enter password to confirm:',
+      name: 'confirm',
+    },
+  ])
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot your password already?!')
+  );
 
-const answers = [];
 
-function answerQuestions(count) {
-
-    // var count = 0;
-
-    if(count === questions.length)
-        {
-            rl.close();
-            return;
-        }
-
-        rl.question(questions[count].question, function(answer)
-        {
-            // console.log("This is your answer " + answer);
-            answers.push(answer);
-            console.log(answers);
-            answerQuestions(count + 1); //Made the function recursive so it keeps calling itself. The code kept breaking/getting stuck in an infinite loop when I tried using count++ or a for/while loop.
-        })
-
-    // while (count < questions.length)
-    // {
-    //     if(count === questions.length)
-    //     {
-    //         rl.close();
-    //     }
-    //     else
-    //     {
-    //         rl.question(questions[count].question, function(answer){
-    //             console.log("This is your answer ${answer}" + answer);
-    //             answers.push(answer)
-    //             console.log(answers);
-    //             count++
-    //         });
-    //     }
-    // }
-
-    // for(i = 0; i < questions.length; i++)
-    // {
-    //     rl.question(questions[i].question, function(answer){
-    //         console.log("This is your answer " + answer);
-    //         answers.push(answer)
-    //         console.log(answers);
-    //         rl.close();
-    //     });
-    
-    // }
-}
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) 
+{
+    
+}
 
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
 init();
-
-console.log("This is how many questions we have: " + questions.length);
-console.log("This is the question to question 1: " + questions[0].question);
-answerQuestions(0);
 
