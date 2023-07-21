@@ -29,7 +29,7 @@ function generateMarkdown(response) {
   const githubProfile = response.github;
   const eMailAddress = response.eMail;
   
-
+  //Below is what will be returned. We set the format like to be like this, and then return the user inputs based on the variables we defined above.
 
   return `# ${title}
   

@@ -30,9 +30,8 @@ const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
 const generateMarkdown = require("./utils/generateMarkdown.js"); //Need to call over my generateMarkdown js file to use the generateMarkdown function.
 
-
-
 // TODO: Create an array of questions for user input
+//Below are the questions we will ask our users. When the user answers the question, it will be stored under the variable that is next to the name. For example, for the first question "What is the title of your README", the variable will be stored under title. We define this in a function response at the very end, so to get the title, we would call the function and then the title. EX: response.title, response.description, etc.
 
 inquirer
   .prompt([
@@ -88,7 +87,7 @@ inquirer
   ])
   .then(function(response){
 
-    const markdown = generateMarkdown(response);
+    const markdown = generateMarkdown(response); //The function that is defined in generateMarkdown.js
 
     //Originally tried using stringify, but it made the README print out not print out new lines.
     fs.writeFile('README.md', markdown, (err) =>
@@ -102,18 +101,9 @@ inquirer
 //     response,
 //   };
 
-
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) 
 {
-    // fs.writeFile('README.md', JSON.stringify(generateMarkdown(response), null, '\t'), (err) =>
-    // err ? console.error(err) : console.log('Commit logged!')
-    // );
-    
-    fs.writeFile('README.md', JSON.stringify(generateMarkdown(response), null, '\t'), (err) =>
-    err ? console.error(err) : console.log('Commit logged!')
-    );
 }
 
 // TODO: Create a function to initialize app

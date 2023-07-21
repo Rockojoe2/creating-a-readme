@@ -1,40 +1,40 @@
-# qwee
+# Joey's README
   
   ## Description
-  fade
+  this is Joey's README
 
   ## Table of Contents
 
   -[Installation](#Installation)
-  
-  -Usage
 
-  -License
+  -[Usage](#Usage)
 
-  -Contributing
+  -[License](#License)
 
-  -Tests
-  
-  -Questions
+  -[Contributions](#Contributions)
+
+  -[Tests](#Tests)
+
+  -[Questions](#Questions)
 
   ## Installation
-  wq3
+  go to my github
 
   ## Usage
-  dad
+  to make a readme
 
   ## License
-  GNU General Public License V3.0
+  MIT License
 
   ## Contributions
-  dad
+  Joey
 
   ## Tests
-  213adw
+  no tests
 
   ## Questions
-  Feel free to reach out to me at my Github at https://github.com/ewae.
+  Feel free to reach out to me at my Github at https://github.com/rockojoe2.
 
-  You can also reach me through my e-mail at dafwae!
+  You can also reach me through my e-mail at lee.d.joey@gmail.com!
 
   
