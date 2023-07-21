@@ -28,7 +28,7 @@ Need to figure out how to make a README file from our answers that we get.
 
 const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
-const generateMarkdown = require("./utils/generateMarkdown.js"); //Need to call over my generateMarkdown js file to use the generateMarkdown function.
+const generateMarkdown = require("./Develop/utils/generateMarkdown.js"); //Need to call over my generateMarkdown js file to use the generateMarkdown function.
 
 // TODO: Create an array of questions for user input
 //Below are the questions we will ask our users. When the user answers the question, it will be stored under the variable that is next to the name. For example, for the first question "What is the title of your README", the variable will be stored under title. We define this in a function response at the very end, so to get the title, we would call the function and then the title. EX: response.title, response.description, etc.

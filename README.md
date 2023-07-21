@@ -1,7 +1,7 @@
-# Joey's README
+# Create a README Project
   
   ## Description
-  this is Joey's README
+  This is the project to create a README
 
   ## Table of Contents
 
@@ -18,10 +18,10 @@
   -[Questions](#Questions)
 
   ## Installation
-  go to my github
+  Go to github and clone the repo
 
   ## Usage
-  to make a readme
+  If you want to create a README
 
   ## License
   MIT License
@@ -30,7 +30,7 @@
   Joey
 
   ## Tests
-  no tests
+  Many tests
 
   ## Questions
   Feel free to reach out to me at my Github at https://github.com/rockojoe2.
