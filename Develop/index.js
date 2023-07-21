@@ -28,6 +28,7 @@ Need to figure out how to make a README file from our answers that we get.
 
 const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
 
@@ -37,32 +38,54 @@ inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'What is the title of your README?',
+      name: 'title',
     },
     {
       type: 'input',
-      message: 'What is your password?',
-      name: 'password',
+      message: 'Enter a description?',
+      name: 'description',
     },
     {
       type: 'input',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
+      message: 'Enter installation instructions:',
+      name: 'installation',
     },
+    {
+        type: 'list',
+        message: 'Enter installation instructions:',
+        name: 'license',
+        choices: ["MIT License", "Apache License 2.0", "GNU General Public License V3.0", "Eclipse Public License 1.0", "Other"],
+      },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+  .then(function(response){
+
+    const markdown = generateMarkdown(response);
+
+    //Originally tried using stringify, but it made the README print out not print out new lines.
+    fs.writeFile('README.md', markdown, (err) =>
+    err ? console.error(err) : console.log('Commit logged!')
+    );
+
+  }
   );
+
+//   module.exports = {
+//     response,
+//   };
 
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) 
 {
+    // fs.writeFile('README.md', JSON.stringify(generateMarkdown(response), null, '\t'), (err) =>
+    // err ? console.error(err) : console.log('Commit logged!')
+    // );
     
+    fs.writeFile('README.md', JSON.stringify(generateMarkdown(response), null, '\t'), (err) =>
+    err ? console.error(err) : console.log('Commit logged!')
+    );
 }
 
 // TODO: Create a function to initialize app

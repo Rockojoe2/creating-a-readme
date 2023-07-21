@@ -1,0 +1,5 @@
+{
+	"username": "Joey",
+	"password": "123",
+	"confirm": "123"
+}
