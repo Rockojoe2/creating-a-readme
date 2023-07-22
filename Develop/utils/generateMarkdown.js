@@ -4,7 +4,40 @@ const fs = require('fs');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(response) 
+{
+  const license = response.license;
+  let licenseBadge = "";
+
+  if (license == "MIT License")
+  {
+    licenseBadge = "MIT LICENSE";
+    //https://img.shields.io/badge/MIT_LICENSE-blue
+  }
+  else if (license == "Apache License 2.0")
+  {
+    licenseBadge = "Apache License 2.0";
+    //https://img.shields.io/badge/APACHE_LICENSE_2.0-blue
+  }
+  else if (license == "GNU General Public License V3.0")
+  {
+    licenseBadge = "GNU General Public License V3.0";
+    //https://img.shields.io/badge/GNU_LICENSE_3.0-blue
+  }
+  else if (license == "Eclipse Public License 1.0")
+  {
+    licenseBadge = "Eclipse Public License 1.0";
+    //https://img.shields.io/badge/ECLIPSE_PUBLIC_LICENSE_1.0-blue
+  }
+  else
+  {
+    licenseBadge = "Not Available";
+  }
+
+  return licenseBadge;
+
+
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -12,7 +45,10 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
@@ -32,7 +68,9 @@ function generateMarkdown(response) {
   //Below is what will be returned. We set the format like to be like this, and then return the user inputs based on the variables we defined above.
 
   return `# ${title}
-  
+
+  ${renderLicenseBadge(response)}
+
   ## Description
   ${description}
 

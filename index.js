@@ -61,7 +61,7 @@ inquirer
           type: 'list',
           message: 'Pick a license:',
           name: 'license',
-          choices: ["MIT License", "Apache License 2.0", "GNU General Public License V3.0", "Eclipse Public License 1.0", "Other"],
+          choices: ["MIT License", "Apache License 2.0", "GNU General Public License V3.0", "Eclipse Public License 1.0"],
     },
 
     {
