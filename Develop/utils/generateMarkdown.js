@@ -9,24 +9,27 @@ function renderLicenseBadge(response)
   const license = response.license;
   let licenseBadge = "";
 
+  //Created the license badges from https://shields.io/badges. Got the license links to licenses from searching at https://opensource.org/licenses/.
+
   if (license == "MIT License")
   {
-    licenseBadge = "MIT LICENSE";
+    licenseBadge = "[![MIT License](https://img.shields.io/badge/MIT_LICENSE-blue)](https://opensource.org/licenses/MIT)";
     //https://img.shields.io/badge/MIT_LICENSE-blue
+    //[![ALT_TEXT](IMAGE_URL)](LINK_URL)
   }
   else if (license == "Apache License 2.0")
   {
-    licenseBadge = "Apache License 2.0";
+    licenseBadge = "[![Apache License 2.0](https://img.shields.io/badge/APACHE_LICENSE_2.0-blue)](https://opensource.org/license/apache-2-0/)";
     //https://img.shields.io/badge/APACHE_LICENSE_2.0-blue
   }
   else if (license == "GNU General Public License V3.0")
   {
-    licenseBadge = "GNU General Public License V3.0";
+    licenseBadge = "[![GNU General Public License V3.0](https://img.shields.io/badge/GNU_LICENSE_3.0-blue)](https://opensource.org/license/gpl-3-0/)";
     //https://img.shields.io/badge/GNU_LICENSE_3.0-blue
   }
   else if (license == "Eclipse Public License 1.0")
   {
-    licenseBadge = "Eclipse Public License 1.0";
+    licenseBadge = "[![GNU General Public License V3.0](https://img.shields.io/badge/ECLIPSE_PUBLIC_LICENSE_1.0-blue)](https://opensource.org/license/epl-1-0/)";
     //https://img.shields.io/badge/ECLIPSE_PUBLIC_LICENSE_1.0-blue
   }
   else
@@ -35,7 +38,6 @@ function renderLicenseBadge(response)
   }
 
   return licenseBadge;
-
 
 }
 
@@ -76,17 +78,17 @@ function generateMarkdown(response) {
 
   ## Table of Contents
 
-  -[Installation](#Installation)
+  -[Installation](#installation)
 
-  -[Usage](#Usage)
+  -[Usage](#usage)
 
-  -[License](#License)
+  -[License](#license)
 
-  -[Contributions](#Contributions)
+  -[Contributions](#contributions)
 
-  -[Tests](#Tests)
+  -[Tests](#tests)
 
-  -[Questions](#Questions)
+  -[Questions](#questions)
 
   ## Installation
   ${installInstructions}
