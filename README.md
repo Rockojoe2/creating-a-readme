@@ -1,9 +1,9 @@
-# 123
+# Joey's Readme
 
   [![MIT License](https://img.shields.io/badge/MIT_LICENSE-blue)](https://opensource.org/licenses/MIT)
 
   ## Description
-  4123
+  This is my readme
 
   ## Table of Contents
 
@@ -20,23 +20,23 @@
   -[Questions](#questions)
 
   ## Installation
-  4213
+  Go to my github and clone a repo
 
   ## Usage
-  412
+  to create a readme
 
   ## License
   MIT License
 
   ## Contributions
-  123
+  Joey
 
   ## Tests
-  4123
+  test
 
   ## Questions
-  Feel free to reach out to me at my Github at https://github.com/4.
+  Feel free to reach out to me at my Github at https://github.com/rockojoe2.
 
-  You can also reach me through my e-mail at 12!
+  You can also reach me through my e-mail at lee.d.joey@gmail.com!
 
   
